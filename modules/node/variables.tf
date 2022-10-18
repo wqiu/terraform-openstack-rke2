@@ -115,6 +115,10 @@ variable "registries_conf" {
   type = string
 }
 
+variable "webhook_conf" {
+  type = string
+}
+
 variable "bootstrap_server" {
   type    = string
   default = ""
