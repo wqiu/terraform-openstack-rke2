@@ -80,6 +80,7 @@ module "server" {
   rke2_config            = var.rke2_config
   containerd_config_file = var.containerd_config_file
   registries_conf        = var.registries_conf
+  webhook_conf           = var.webhook_conf
   rke2_token             = random_string.rke2_token.result
   additional_san         = var.additional_san
   manifests_path         = var.manifests_path
