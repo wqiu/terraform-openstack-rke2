@@ -20,6 +20,7 @@ locals {
     bastion_host       = module.server.floating_ip[0]
     rke2_token         = random_string.rke2_token.result
     registries_conf    = var.registries_conf
+    webhook_conf       = var.webhook_conf
   }
   tmpdir           = "${path.root}/.terraform/tmp/rke2"
   ssh_key_arg      = var.use_ssh_agent ? "" : "-i ${var.ssh_key_file}"

@@ -178,6 +178,12 @@ variable "registries_conf" {
   description = "Containerd registries config in gz+b64"
 }
 
+variable "webhook_conf" {
+  type        = string
+  default     = ""
+  description = "webhook config in gz+b64"
+}
+
 variable "additional_san" {
   type        = list(string)
   default     = []

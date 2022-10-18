@@ -33,6 +33,7 @@ resource "openstack_compute_instance_v2" "instance" {
       rke2_conf        = var.rke2_config
       containerd_conf  = var.containerd_config_file
       registries_conf  = var.registries_conf
+      webhook_conf     = var.webhook_conf
       additional_san   = var.additional_san
       manifests_files  = var.manifests_path != "" ? [for f in fileset(var.manifests_path, "*.{yml,yaml}") : [f, base64gzip(file("${var.manifests_path}/${f}"))]] : []
       manifests_gzb64  = var.manifests_gzb64
